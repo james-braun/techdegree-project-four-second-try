@@ -3,6 +3,7 @@
 const element = document.getElementById('gallery-heading');
 element.remove();
 
+// create a inpput element.
 const searchElement = document.createElement("input");
 searchElement.setAttribute('type', 'search');
 searchElement.setAttribute('id', 'search');
@@ -18,20 +19,19 @@ lightbox.option({
      'alwaysShowNavOnTouchDevices': true
 });
 
-$(document).ready(function() {    
+$(document).ready(function() {
+    
+    // input event keyup()
     $('input').keyup( function ( event ) {
 
-        let search_text = document.getElementById('search').value.toUpperCase();
-        
+        // cycle though all anchor elements
         $('a').each(function() {
-            let caption_string = $(this).attr('data-title');
-            if (caption_string) {
-                caption_string = caption_string.toUpperCase();
-                if (caption_string.includes(search_text) === true) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+
+            // if the for loop anchor element is not null.  compare the anchor elements data-title to the search elements value and show or hide pictures as necessary.
+            if (($(this).attr('data-title')) && ($(this).attr('data-title').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) === true)) {
+                $(this).show();
+            } else {
+                $(this).hide();
             }
         });
     });
