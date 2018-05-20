@@ -1,26 +1,26 @@
 
-// select and remove H1 element.
-const element = document.getElementById('gallery-heading');
-element.remove();
-
-// create a inpput element.
-const searchElement = document.createElement("input");
-searchElement.setAttribute('type', 'search');
-searchElement.setAttribute('id', 'search');
-searchElement.setAttribute('placeholder', 'Search');
-searchElement.setAttribute('value', '');
-searchElement.setAttribute('name', 'user_search');
-
-// add input element to the webpage.
-document.getElementById('search-bar').appendChild(searchElement);
-
-// show arrows on all mobile devices.
-lightbox.option({
-     'alwaysShowNavOnTouchDevices': true
-});
 
 $(document).ready(function() {
+
+    // select and remove H1 element.
+    $(document.getElementById('gallery-heading')).hide();
     
+    // create a input element.
+    const searchElement = document.createElement("input");
+    document.getElementById('search-bar').appendChild(searchElement);
+   
+    // set input elements attributes.
+    searchElement.setAttribute('type', 'search');
+    searchElement.setAttribute('id', 'search');
+    searchElement.setAttribute('placeholder', 'Search');
+    searchElement.setAttribute('value', '');
+    searchElement.setAttribute('name', 'user_search');
+
+    // show lightbox arrows on all mobile devices.
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true
+    });
+
     // input event keyup()
     $('input').keyup( function ( event ) {
 
