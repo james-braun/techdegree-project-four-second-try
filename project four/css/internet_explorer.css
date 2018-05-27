@@ -14,14 +14,14 @@
 
 }
  
-@media all and (min-width: 47.5em) and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 49.5em) {
+@media all and (min-width: 49.5em) and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 49.5em) {
     
     .container {
         width: 49.5em;
     }
 }
 
-@media all and (min-width: 64em) and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 66em) {
+@media all and (min-width: 66em) and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 66em) {
     
     .container {
         width: 66em;
