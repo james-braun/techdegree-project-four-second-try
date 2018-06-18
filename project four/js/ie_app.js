@@ -21,14 +21,23 @@ $(document).ready(function() {
         'alwaysShowNavOnTouchDevices': true
     });
 
+    function includes(container, value) {
+        var returnValue = false;
+        var pos = container.indexOf(value);
+        if (pos >= 0) {
+            returnValue = true;
+        }
+        return returnValue;
+    }
+
     // input event keyup()
-    $('input').keyup( function () {
+    document.querySelector('input').addEventListener('keyup', function () {
 
         // cycle though all anchor elements
         $('a').each(function() {
 
             // if the for loop anchor element is not null.  compare the anchor elements data-title to the search elements value and show or hide pictures as necessary.
-            if (($(this).attr('data-title')) && ($(this).attr('data-title').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) === true)) {
+            if (($(this).attr('data-title')) && (includes($(this).attr('data-title').toUpperCase(), document.getElementById('search').value.toUpperCase()) === true)) {
                 $(this).show();
             } else {
                 $(this).hide();
