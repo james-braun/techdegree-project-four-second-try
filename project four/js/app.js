@@ -18,7 +18,8 @@ $(document).ready(function() {
 
     // show lightbox arrows on all mobile devices.
     lightbox.option({
-        'alwaysShowNavOnTouchDevices': true
+        'alwaysShowNavOnTouchDevices': true,
+        'wrapAround': true
     });
 
     // input event keyup()
