@@ -17,7 +17,11 @@
     a {
         margin: 2em;
     }
-
+    
+    /* fix lightbox error */
+    .lb-nav a.lb-prev {
+        width: 20%;
+    }
 }
  
 @media all and (min-width: 49.5em) and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 49.5em) {
