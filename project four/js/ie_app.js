@@ -21,6 +21,7 @@ $(document).ready(function() {
         'wrapAround': true
     });
 
+    // function tests if search is in data-title.
     function includes(container, value) {
         var returnValue = false;
         var pos = container.indexOf(value);
