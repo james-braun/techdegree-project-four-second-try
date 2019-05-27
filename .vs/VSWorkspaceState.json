@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\project four",
-    "\\project four\\css",
-    "\\project four\\js"
+    "\\js"
   ],
-  "SelectedNode": "\\project four\\js\\ie_app.js",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
